@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khóa học – Lightweave | Cơ bản, Luyện thi và 1 kèm 1 cùng Lily Nguyễn</title>
+  <meta name="description" content="Ba khóa học vẽ của Lily Nguyễn: Khóa Cơ bản 600.000đ/tháng, Khóa Luyện thi 800.000đ/tháng và Khóa 1 kèm 1 tại nhà. Lớp học online, tối đa 5 học viên mỗi lớp." />
+  <meta name="theme-color" content="#6C9CF0" />
+  <meta property="og:title" content="Khóa học – Lightweave" />
+  <meta property="og:type" content="website" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('lightweave-theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Lightweave – về trang chủ">
+        <span class="logo-mark js-logo" aria-hidden="true"></span>
+        <span class="logo-text">Lightweave<small>Lớp vẽ Ánh Sáng</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="index.html#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="index.html#thanh-tich" class="nav-link">Thành tích</a></li>
+          <li><a href="gallery.html" class="nav-link">Phòng tranh</a></li>
+          <li><a href="courses.html" class="nav-link is-active" aria-current="page">Khóa học</a></li>
+          <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Chuyển sang giao diện tối" aria-pressed="false">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#form" class="btn btn-primary btn-sm header-cta">Đăng ký học</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mainNav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="coursesTitle">
+      <div class="container">
+        <p class="eyebrow eyebrow-dark">Khóa học</p>
+        <h1 id="coursesTitle" class="page-title">Chọn một lớp, <em>cầm cọ</em> ngay hôm nay</h1>
+        <p class="lead">Ba khóa học cho từng nhu cầu: nền tảng cho bé mới bắt đầu, luyện thi các cuộc thi phong trào, hoặc học riêng 1 kèm 1 ngay tại nhà.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px" aria-label="Danh sách khóa học">
+      <div class="container">
+        <div class="course-grid course-list" id="courseGrid"></div>
+        <p class="form-note" style="margin-top:24px">Lịch học và học phí có thể thay đổi theo từng lớp. Bấm “Đăng ký tư vấn” để cô sắp xếp lớp phù hợp với bé.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Chưa chọn được khóa">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h2>Chưa biết khóa nào hợp với bé?</h2>
+            <p>Nhắn cho cô độ tuổi và mục tiêu của bé, cô sẽ gợi ý khóa phù hợp.</p>
+          </div>
+          <div class="actions">
+            <a href="contact.html#form" class="btn btn-primary">Đăng ký tư vấn</a>
+            <a href="tel:0773076302" class="btn btn-ghost"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0773 076 302</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="lien-he">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Lightweave – về trang chủ">
+          <span class="logo-mark js-logo" aria-hidden="true"></span>
+          <span class="logo-text">Lightweave<small>Lớp vẽ Ánh Sáng</small></span>
+        </a>
+        <p>Where art weaves light into life.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Liên kết nhanh">
+        <h3>Liên kết nhanh</h3>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gallery.html">Phòng tranh</a></li>
+          <li><a href="courses.html">Khóa học</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Liên hệ</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:0773076302">0773 076 302</a></li>
+          <li><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:nthaozy126@gmail.com">nthaozy126@gmail.com</a></li>
+          <li><i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Lily Nguyễn / Nguyễn Hoàng Thảo Vy</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Nhận tin lớp học</h3>
+        <p>Thông báo lớp mới và tranh mới của cô.</p>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail" class="visually-hidden">Email của bạn</label>
+          <div class="newsletter-field">
+            <input id="newsletterEmail" type="email" placeholder="Email của bạn" autocomplete="email" required />
+            <button type="submit" class="btn btn-primary btn-sm">Đăng ký</button>
+          </div>
+          <p class="form-msg" id="newsletterMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Lightweave – Lớp vẽ Ánh Sáng · Tác phẩm thuộc về tác giả của từng bức tranh.</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Đóng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <div class="modal-body" id="modalBody"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

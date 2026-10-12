@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phòng tranh – Lightweave | Tranh của cô Lily và tác phẩm học viên</title>
+  <meta name="description" content="Phòng tranh của Lily Nguyễn: tranh màu nước, gouache và các tác phẩm của học viên lớp Lớp vẽ Ánh Sáng. Lọc theo thể loại hoặc tìm theo từ khóa." />
+  <meta name="theme-color" content="#6C9CF0" />
+  <meta property="og:title" content="Phòng tranh – Lightweave" />
+  <meta property="og:type" content="website" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('lightweave-theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Lightweave – về trang chủ">
+        <span class="logo-mark js-logo" aria-hidden="true"></span>
+        <span class="logo-text">Lightweave<small>Lớp vẽ Ánh Sáng</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="index.html#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="index.html#thanh-tich" class="nav-link">Thành tích</a></li>
+          <li><a href="gallery.html" class="nav-link is-active" aria-current="page">Phòng tranh</a></li>
+          <li><a href="courses.html" class="nav-link">Khóa học</a></li>
+          <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Chuyển sang giao diện tối" aria-pressed="false">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Đăng ký học</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mainNav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== TIÊU ĐỀ + THANH LỌC ===================== -->
+    <section class="page-hero" aria-labelledby="galleryTitle">
+      <div class="container">
+        <p class="eyebrow eyebrow-dark">Phòng tranh</p>
+        <h1 id="galleryTitle" class="page-title">Những lớp màu <em>đã được dệt</em></h1>
+        <p class="lead">Tranh của cô Lily và tác phẩm của học viên. Chọn thể loại hoặc gõ từ khóa để lọc, rồi bấm vào một bức tranh để xem lớn hơn.</p>
+
+        <div class="toolbar" style="margin-top:28px">
+          <div class="chips" id="galleryFilters" role="group" aria-label="Lọc theo thể loại"></div>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <label for="gallerySearch" class="visually-hidden">Tìm tranh</label>
+            <input id="gallerySearch" type="search" placeholder="Tìm: hướng dương, sen, Bến Thành…" autocomplete="off" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thanh chọn mục: dính dưới menu khi cuộn để chuyển nhanh giữa các mục -->
+    <nav class="subnav subnav-sticky" aria-label="Chọn mục trong phòng tranh">
+      <div class="container subnav-inner">
+        <a href="#tranh-co">Tranh của cô Lily</a>
+        <a href="#hoc-vien-k1">Học viên Khóa 1</a>
+        <a href="#hoc-vien-k2">Học viên Khóa 2</a>
+      </div>
+    </nav>
+
+    <!-- ===================== MỤC 1: TRANH CỦA CÔ LILY ===================== -->
+    <section class="section" id="tranh-co" aria-labelledby="tcTitle" style="padding-top:24px">
+      <div class="container">
+        <header class="section-head-left">
+          <p class="eyebrow eyebrow-dark">Mục 1</p>
+          <h2 id="tcTitle">Tranh của cô Lily</h2>
+          <p class="section-lead">Những bức tranh cô đã vẽ, từ phong cảnh, hoa lá đến nhân vật và các chú thú đáng yêu.</p>
+        </header>
+        <p class="result-count" id="teacherCount" aria-live="polite"></p>
+        <div class="art-grid" id="teacherGrid"></div>
+        <div class="empty-state" id="teacherEmpty" hidden>
+          <p>Chưa có tranh nào khớp với bộ lọc.</p>
+          <button class="btn btn-ghost btn-sm js-reset" type="button">Xóa bộ lọc</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MỤC 2: HỌC VIÊN KHÓA 1 ===================== -->
+    <section class="section section-tint" id="hoc-vien-k1" aria-labelledby="k1Title">
+      <div class="container">
+        <header class="section-head-left">
+          <p class="eyebrow eyebrow-dark">Mục 2</p>
+          <h2 id="k1Title">Tác phẩm học viên Khóa 1</h2>
+          <p class="section-lead">Bài vẽ của các bạn học viên Khóa 1 · Cơ bản.</p>
+        </header>
+        <p class="result-count" data-course-count="c1" aria-live="polite"></p>
+        <div class="art-grid" data-course-grid="c1"></div>
+        <div class="empty-state" data-course-empty="c1" hidden>
+          <p>Chưa có tác phẩm nào khớp với bộ lọc.</p>
+          <button class="btn btn-ghost btn-sm js-reset" type="button">Xóa bộ lọc</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MỤC 3: HỌC VIÊN KHÓA 2 ===================== -->
+    <section class="section" id="hoc-vien-k2" aria-labelledby="k2Title">
+      <div class="container">
+        <header class="section-head-left">
+          <p class="eyebrow eyebrow-dark">Mục 3</p>
+          <h2 id="k2Title">Tác phẩm học viên Khóa 2</h2>
+          <p class="section-lead">Bài vẽ của các bạn học viên Khóa 2 · Luyện thi phong trào.</p>
+        </header>
+        <p class="result-count" data-course-count="c2" aria-live="polite"></p>
+        <div class="art-grid" data-course-grid="c2"></div>
+        <div class="empty-state" data-course-empty="c2" hidden>
+          <p>Chưa có tác phẩm nào khớp với bộ lọc.</p>
+          <button class="btn btn-ghost btn-sm js-reset" type="button">Xóa bộ lọc</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KÊU GỌI ===================== -->
+    <section class="section" aria-label="Đăng ký học">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h2>Muốn bé cũng có tranh của riêng mình?</h2>
+            <p>Xem các khóa học và đăng ký tư vấn để bắt đầu cùng cô.</p>
+          </div>
+          <div class="actions">
+            <a href="courses.html" class="btn btn-primary">Xem khóa học</a>
+            <a href="contact.html#form" class="btn btn-ghost">Đăng ký tư vấn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="lien-he">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Lightweave – về trang chủ">
+          <span class="logo-mark js-logo" aria-hidden="true"></span>
+          <span class="logo-text">Lightweave<small>Lớp vẽ Ánh Sáng</small></span>
+        </a>
+        <p>Where art weaves light into life.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Liên kết nhanh">
+        <h3>Liên kết nhanh</h3>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gallery.html">Phòng tranh</a></li>
+          <li><a href="courses.html">Khóa học</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Liên hệ</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:0773076302">0773 076 302</a></li>
+          <li><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:nthaozy126@gmail.com">nthaozy126@gmail.com</a></li>
+          <li><i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Lily Nguyễn / Nguyễn Hoàng Thảo Vy</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Nhận tin lớp học</h3>
+        <p>Thông báo lớp mới và tranh mới của cô.</p>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail" class="visually-hidden">Email của bạn</label>
+          <div class="newsletter-field">
+            <input id="newsletterEmail" type="email" placeholder="Email của bạn" autocomplete="email" required />
+            <button type="submit" class="btn btn-primary btn-sm">Đăng ký</button>
+          </div>
+          <p class="form-msg" id="newsletterMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Lightweave – Lớp vẽ Ánh Sáng · Tác phẩm thuộc về tác giả của từng bức tranh.</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Đóng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <div class="modal-body" id="modalBody"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

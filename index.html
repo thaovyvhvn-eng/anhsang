@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lightweave – Lớp vẽ Ánh Sáng | Lily Nguyễn, dạy vẽ cho học sinh 6–15 tuổi</title>
+  <meta name="description" content="Lớp vẽ Ánh Sáng (Lightweave) của Lily Nguyễn: dạy vẽ cho học sinh 6–15 tuổi tại TP. Hồ Chí Minh, học online hoặc gia sư tại nhà. Giải thưởng mỹ thuật cấp Thành phố." />
+  <meta name="theme-color" content="#6C9CF0" />
+  <meta property="og:title" content="Lightweave – Lớp vẽ Ánh Sáng" />
+  <meta property="og:description" content="Where art weaves light into life. Lớp vẽ của Lily Nguyễn." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/cover.jpg" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('lightweave-theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Lightweave – về trang chủ">
+        <span class="logo-mark js-logo" aria-hidden="true"></span>
+        <span class="logo-text">Lightweave<small>Lớp vẽ Ánh Sáng</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="#top" class="nav-link">Trang chủ</a></li>
+          <li><a href="#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="#thanh-tich" class="nav-link">Thành tích</a></li>
+          <li><a href="gallery.html" class="nav-link">Phòng tranh</a></li>
+          <li><a href="courses.html" class="nav-link">Khóa học</a></li>
+          <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Chuyển sang giao diện tối" aria-pressed="false">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm header-cta">Đăng ký học</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mainNav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== TRANG CHỦ: HERO ===================== -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Lily Nguyễn · Lớp vẽ cho học sinh 6–15 tuổi</p>
+          <h1 id="heroTitle" class="hero-title">
+            <span class="line-sun">Lớp vẽ</span>
+            <span class="line-cream">Ánh Sáng</span>
+          </h1>
+          <p class="hero-tagline">“Where art weaves light into life.”</p>
+          <p class="hero-sub">
+            Những nét cọ đan xen để dệt nên ánh sáng, màu sắc và cảm xúc. Mình dạy vẽ theo phương pháp nhẹ nhàng,
+            khuyến khích sáng tạo và phát triển tư duy nghệ thuật cho các bạn nhỏ tại TP. Hồ Chí Minh.
+          </p>
+          <div class="hero-actions">
+            <a href="courses.html" class="btn btn-primary">Xem khóa học <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="gallery.html" class="btn btn-ghost">Xem phòng tranh</a>
+          </div>
+          <p class="hero-note"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Lớp nhỏ tối đa 5 bạn · Học online · Gia sư tại nhà</p>
+          <ul class="hero-facts" aria-label="Số liệu nổi bật">
+            <li><strong data-count="7">7</strong><span>giải thưởng mỹ thuật</span></li>
+            <li><strong>6–15</strong><span>tuổi học viên</span></li>
+            <li><strong>2–3</strong><span>buổi học mỗi tuần</span></li>
+          </ul>
+        </div>
+        <div class="hero-art" id="heroArt" role="img" aria-label="Minh họa hoa hướng dương và mây trên nền trời xanh"></div>
+      </div>
+    </section>
+
+    <!-- ===================== GIỚI THIỆU + THÔNG TIN LỚP ===================== -->
+    <section class="section" id="gioi-thieu" aria-labelledby="gtTitle">
+      <div class="container split">
+        <div>
+          <p class="eyebrow eyebrow-dark">Giới thiệu</p>
+          <h2 id="gtTitle">Mình là Lily, người <em>cầm cọ</em> và dạy vẽ</h2>
+          <p class="lead">Tên đầy đủ: Nguyễn Hoàng Thảo Vy. Trong nhiều năm học tập và sáng tạo nghệ thuật, mình đã đạt nhiều giải thưởng mỹ thuật cấp Thành phố và tham gia nhiều hoạt động giáo dục, sáng tạo dành cho học sinh.</p>
+          <p>Với mong muốn lan tỏa niềm yêu thích hội họa đến các bạn nhỏ, mình mở các lớp học vẽ với phương pháp nhẹ nhàng, khuyến khích sáng tạo và phát triển tư duy nghệ thuật.</p>
+          <p>Các tác phẩm của mình có nhiều chủ đề quen thuộc: Sài Gòn, hoa sen, hướng dương và những miền biển xa.</p>
+          <div class="actions">
+            <button class="btn btn-ghost" type="button" data-poster>Xem poster lớp học</button>
+            <a href="contact.html#form" class="btn btn-primary">Đăng ký tư vấn <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <aside class="info-card" aria-label="Thông tin lớp học">
+          <div class="mini-art" id="miniArt" aria-hidden="true"></div>
+          <dl>
+            <dt>Đối tượng</dt><dd>Học sinh 6–15 tuổi, người mới bắt đầu, và các bạn chuẩn bị thi cuộc thi mỹ thuật</dd>
+            <dt>Hình thức</dt><dd>Online (Khóa 1, Khóa 2); gia sư tại nhà (Khóa 3)</dd>
+            <dt>Sĩ số</dt><dd>Tối đa 5 học viên mỗi lớp (Khóa 1, Khóa 2)</dd>
+            <dt>Lịch học</dt><dd>2 – 3 buổi mỗi tuần · 90 phút mỗi buổi</dd>
+            <dt>Dạy tại nhà</dt><dd>Thủ Đức, Quận 2, Bình Thạnh, Quận 1, Phú Nhuận, Gò Vấp</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== THÀNH TÍCH ===================== -->
+    <section class="section section-tint" id="thanh-tich" aria-labelledby="ttTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow-dark">Thành tích</p>
+          <h2 id="ttTitle">Giải thưởng <em>mỹ thuật</em> 2023 – 2025</h2>
+          <p class="section-lead">Từ cấp trường đến cấp Thành phố và các cuộc thi online.</p>
+        </header>
+
+        <ul class="stats" aria-label="Tổng hợp giải thưởng">
+          <li><strong data-count="7">7</strong><span>giải thưởng</span></li>
+          <li><strong data-count="3">3</strong><span>giải Nhất</span></li>
+          <li><strong data-count="4">4</strong><span>giải Ba</span></li>
+        </ul>
+
+        <div class="chips" id="awardFilters" role="group" aria-label="Lọc giải thưởng theo năm" style="margin-bottom:28px">
+          <button class="chip is-active" type="button" data-year="all" aria-pressed="true">Tất cả</button>
+          <button class="chip" type="button" data-year="2023" aria-pressed="false">2023</button>
+          <button class="chip" type="button" data-year="2024" aria-pressed="false">2024</button>
+          <button class="chip" type="button" data-year="2025" aria-pressed="false">2025</button>
+        </div>
+
+        <div class="award-grid">
+          <article class="award" data-year="2023">
+            <span class="award-rank">Giải Nhất</span><span class="award-year">2023</span>
+            <h3>Áo dài và Hoa</h3><p>Cấp Thành phố Hồ Chí Minh</p>
+          </article>
+          <article class="award" data-year="2023">
+            <span class="award-rank is-ba">Giải Ba</span><span class="award-year">2023</span>
+            <h3>Gói gọn mùa hè trên trang giấy</h3><p>Cuộc thi online · Hải Tiến Creative</p>
+          </article>
+          <article class="award" data-year="2024">
+            <span class="award-rank">Giải Nhất</span><span class="award-year">2024</span>
+            <h3>Nét vẽ xanh</h3><p>Cấp trường THPT Chuyên</p>
+          </article>
+          <article class="award" data-year="2024">
+            <span class="award-rank is-ba">Giải Ba</span><span class="award-year">2024</span>
+            <h3>Nét vẽ xanh</h3><p>Cấp Thành phố Hồ Chí Minh</p>
+          </article>
+          <article class="award" data-year="2024">
+            <span class="award-rank is-ba">Giải Ba</span><span class="award-year">2024</span>
+            <h3>Gói gọn mùa hè trên trang giấy</h3><p>Cuộc thi online · Hải Tiến Creative</p>
+          </article>
+          <article class="award" data-year="2025">
+            <span class="award-rank">Giải Nhất</span><span class="award-year">2025</span>
+            <h3>Nét vẽ xanh</h3><p>Cấp trường THPT Chuyên</p>
+          </article>
+          <article class="award" data-year="2025">
+            <span class="award-rank is-ba">Giải Ba</span><span class="award-year">2025</span>
+            <h3>Nét vẽ xanh</h3><p>Cấp Thành phố Hồ Chí Minh</p>
+          </article>
+        </div>
+
+        <!-- Minh chứng: báo chí, lễ trao giải, trao tặng tranh -->
+        <div class="evidence">
+          <h3 class="evidence-title">Minh chứng</h3>
+          <p class="evidence-lead">Báo chí đưa tin, lễ trao giải và hoạt động trao tặng tranh.</p>
+          <div class="evidence-grid">
+            <figure class="evidence-item">
+              <a href="images/evidence/ev-02.jpg" target="_blank" rel="noopener"><img src="images/evidence/ev-02.jpg" width="1100" height="613" loading="lazy" alt="Bài báo Du Lịch TP.HCM đưa tin về giải Nhất cuộc thi vẽ áo dài" /></a>
+              <figcaption>Báo Du Lịch TP.HCM đưa tin về giải Nhất cuộc thi vẽ áo dài.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <a href="images/evidence/ev-03.jpg" target="_blank" rel="noopener"><img src="images/evidence/ev-03.jpg" width="1100" height="599" loading="lazy" alt="Lễ trao giải Nhất cuộc thi vẽ tranh thiếu nhi tại Lễ hội Áo dài 2023" /></a>
+              <figcaption>Trao giải Nhất · Cuộc thi vẽ tranh thiếu nhi, Lễ hội Áo dài 2023.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <a href="images/evidence/ev-01.jpg" target="_blank" rel="noopener"><img src="images/evidence/ev-01.jpg" width="1100" height="921" loading="lazy" alt="Poster giải Ba cuộc thi Nét Vẽ Xanh, tranh Sài Gòn và kỷ niệm 50 năm Giải phóng miền Nam" /></a>
+              <figcaption>Giải Ba Nét Vẽ Xanh · tranh “Sài Gòn và kỷ niệm 50 năm Giải phóng miền Nam thống nhất đất nước”.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <a href="images/evidence/ev-04.jpg" target="_blank" rel="noopener"><img src="images/evidence/ev-04.jpg" width="1100" height="733" loading="lazy" alt="Đoàn Mông Cổ nhận bức tranh được trao tặng" /></a>
+              <figcaption>Đoàn Mông Cổ nhận tranh trao tặng.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <a href="images/evidence/ev-05.jpg" target="_blank" rel="noopener"><img src="images/evidence/ev-05.jpg" width="1100" height="733" loading="lazy" alt="Đoàn Mông Cổ cầm bức tranh được trao tặng" /></a>
+              <figcaption>Đoàn Mông Cổ nhận tranh trao tặng.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <a href="images/evidence/ev-06.jpg" target="_blank" rel="noopener"><img src="images/evidence/ev-06.jpg" width="1100" height="733" loading="lazy" alt="Đại diện trường trao tặng bức tranh cho trường học Mông Cổ" /></a>
+              <figcaption>Đại diện trường trao tặng tranh cho trường học Mông Cổ.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MỤC TIÊU GIẢNG DẠY ===================== -->
+    <section class="section" id="muc-tieu" aria-labelledby="mtTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow-dark">Giảng dạy</p>
+          <h2 id="mtTitle">Sau mỗi khóa, bạn nhỏ sẽ <em>làm được gì</em></h2>
+          <p class="section-lead">Mục tiêu chung của các lớp, từ những nét vẽ đầu tiên đến khi tự tin dự thi.</p>
+        </header>
+        <ul class="goal-list">
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Nắm vững các nguyên tắc bố cục cơ bản.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Hiểu và vận dụng được kiến thức phối màu.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Xây dựng được ý tưởng cho một tác phẩm hoàn chỉnh.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Biết thể hiện cảm xúc và câu chuyện trong tranh.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Hiểu yêu cầu của các cuộc thi mỹ thuật thiếu nhi.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Biết cách phát triển ý tưởng từ đề bài.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Rèn luyện khả năng sáng tạo và xử lý bố cục nhanh.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Hoàn thiện kỹ năng trình bày bài thi.</span></li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><strong>Tự tin tham gia các cuộc thi mỹ thuật cấp trường, quận hoặc thành phố.</strong></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== KÊU GỌI ĐĂNG KÝ ===================== -->
+    <section class="section" aria-label="Đăng ký học">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h2>Sẵn sàng cầm cọ cùng bé?</h2>
+            <p>Liên hệ để được tư vấn khóa học và lịch học phù hợp với bé.</p>
+          </div>
+          <div class="actions">
+            <a href="contact.html#form" class="btn btn-primary">Đăng ký tư vấn</a>
+            <a href="courses.html" class="btn btn-ghost">Xem 3 khóa học</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="lien-he">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Lightweave – về trang chủ">
+          <span class="logo-mark js-logo" aria-hidden="true"></span>
+          <span class="logo-text">Lightweave<small>Lớp vẽ Ánh Sáng</small></span>
+        </a>
+        <p>Where art weaves light into life.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Liên kết nhanh">
+        <h3>Liên kết nhanh</h3>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gallery.html">Phòng tranh</a></li>
+          <li><a href="courses.html">Khóa học</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Liên hệ</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:0773076302">0773 076 302</a></li>
+          <li><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:nthaozy126@gmail.com">nthaozy126@gmail.com</a></li>
+          <li><i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Lily Nguyễn / Nguyễn Hoàng Thảo Vy</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Nhận tin lớp học</h3>
+        <p>Thông báo lớp mới và tranh mới của cô.</p>
+        <form id="newsletterForm" novalidate>
+          <label for="newsletterEmail" class="visually-hidden">Email của bạn</label>
+          <div class="newsletter-field">
+            <input id="newsletterEmail" type="email" placeholder="Email của bạn" autocomplete="email" required />
+            <button type="submit" class="btn btn-primary btn-sm">Đăng ký</button>
+          </div>
+          <p class="form-msg" id="newsletterMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Lightweave – Lớp vẽ Ánh Sáng · Tác phẩm thuộc về tác giả của từng bức tranh.</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Đóng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <div class="modal-body" id="modalBody"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

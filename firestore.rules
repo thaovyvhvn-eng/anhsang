@@ -1,0 +1,35 @@
+rules_version = '2';
+
+// Dán nội dung này vào Firebase Console → Firestore Database → Rules → Publish.
+// Mỗi người (đăng nhập ẩn danh) chỉ đọc và ghi được dữ liệu của chính mình.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, update, delete: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null && request.auth.uid == uid;
+
+      match /chats/{sessionId}/messages/{messageId} {
+        allow read, update, delete: if request.auth != null && request.auth.uid == uid;
+        allow create: if request.auth != null && request.auth.uid == uid
+          && request.resource.data.text is string
+          && request.resource.data.text.size() <= 2000;
+      }
+    }
+
+    // Đăng ký tư vấn từ form Liên hệ: người đã đăng nhập ẩn danh được GỬI, nhưng không ai đọc/sửa/xóa qua web.
+    // Cô xem danh sách trong Firebase Console → Firestore → collection "registrations".
+    match /registrations/{regId} {
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasOnly(['name', 'phone', 'course', 'mode', 'message', 'source', 'status', 'createdAt'])
+        && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 100
+        && request.resource.data.phone is string && request.resource.data.phone.size() >= 9 && request.resource.data.phone.size() <= 15
+        && request.resource.data.course is string
+        && request.resource.data.mode is string
+        && request.resource.data.message is string && request.resource.data.message.size() <= 1000
+        && request.resource.data.source == 'contact-form'
+        && request.resource.data.status == 'new'
+        && request.resource.data.createdAt == request.time;
+      allow read, update, delete: if false;
+    }
+  }
+}
